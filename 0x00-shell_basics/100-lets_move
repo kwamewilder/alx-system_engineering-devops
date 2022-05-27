@@ -1,0 +1,1 @@
+#!/bin/bash \nmv [[:upper:]]* /tmp/u
