@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-#prints Best school 10x with until loop
-i=0
-until (( i >= 10 ))
+# displays Best School 10 times.
+
+COUNTER=10
+until [ $COUNTER -lt 1 ]
 do
-	echo "Best School"
-	(( i++ ))
+    echo "Best School"
+    let COUNTER-=1
 done

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-#create a story out of /etc/passwd file
+# displays a story with each line of /etc/passwd.
 
-while IFS=: read -r name pass U_ID G_ID GECOS HD SH_NAME
+input="/etc/passwd"
+while IFS=: read -r f1 f2 f3 f4 f5 f6 f7
 do
-	echo "The user $name is part of the $G_ID gang, lives in $HD and rides $SH_NAME. $U_ID's place is protected by the passcode $pass, more info about the user here: $GECOS"
-done < /etc/passwd
+    echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more info about the user here: $f5"
+done < "$input"

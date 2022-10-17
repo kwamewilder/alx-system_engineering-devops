@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
-#prints Best School 10x, if 9 print Hi at the next line
+# displays Best School 10 times.
 
-i=0
-while (( i < 10 ))
+COUNTER=0
+while [ $COUNTER -lt 11 ]
 do
-	if (( i==8 ))
-	then
-		echo "Best School"
-		echo "Hi"
-	else
-		echo "Best School"
-	fi
-	(( i++ ))
+    if [ $COUNTER = 9 ]
+    then
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+    let COUNTER+=1
 done
