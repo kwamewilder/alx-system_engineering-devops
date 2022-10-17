@@ -1,14 +1,21 @@
 #!/usr/bin/env bash
-# Displays hours from 0 to 12 and minutes from 1 to 59
-
+#print the clock digits
+i=1
 hour=0
-
-while [ $hour -lt 13 ]; do
-      echo "Hour: $hour"
-      i=1
-      while [ $i -le 59 ]; do
-      	  echo "$i"
-	  i=$((i+1))
-      done
-      hour=$((hour+1))
+while [ $hour -le 12 ]
+do
+	echo "Hour: $hour"
+	while [ $i -le 59 ]
+	do
+		if [ $i -eq 59 ]
+		then
+			echo "$i"
+			i=1
+			break
+		else
+			echo "$i"
+		fi
+		(( i++ ))
+	done
+	(( hour++ ))
 done
